@@ -80,8 +80,8 @@ Adding stuff related to my sem5 (autumn 2026) at IITB
     <tr>
       <td align="center"><b>Friday</b></td>
       <td colspan="3" align="center">5B</td>
-      <td colspan="3" align="center">6B(L5)</td>
-      <td colspan="3" align="center">7B(L5)</td>
+      <td colspan="3" align="center">6B(L6)</td>
+      <td colspan="3" align="center">7B(L6)</td>
       <td colspan="3" align="center">10B(L4)</td>
       <td colspan="3" align="center">11B(L4)</td>
       <td colspan="2" align="center">XD</td>
