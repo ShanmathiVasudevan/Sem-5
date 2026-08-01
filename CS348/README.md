@@ -1,0 +1,13 @@
+## Logistics
+- Flipped classroom model
+    - View online lecture videos
+    - Deadline to view videos and attempt problems: Sunday prior to the week
+    - Tutorial attendance compulsory
+    - SAFE quiz at the beginning of each tutorial
+- Evaluation
+    - SAFE quizzes: 15%
+    - Normal quizzes: 15% (best 3 out of 4, each 5%)
+    - Midsem 30%
+    - Endsem 40%
+    - < 75% attendance = DX
+- Slides, videos on BodhiTree

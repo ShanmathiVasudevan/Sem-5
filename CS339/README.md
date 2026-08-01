@@ -1,0 +1,11 @@
+## Logistics
+- Evaluation
+    - Quiz 1: 10% (45 mins)
+    - Quiz 2: 10% (45 mins)
+    - Midsem: 30%
+    - Endsem: 40%
+    - Participation: 5%
+    - Attendance: 5% - >(90-10x)% attendance is (5-x) marks, x in {0,1,2,3,4}
+- If missed quiz 1 or quiz 2 for valid reason (pink slip or institute approved reason), marks are scaled from midsem or endsem respectively.
+- Slides on Moodle
+- https://docs.google.com/spreadsheets/d/19Ywzlk9gXTYu2Iy2o6_LkjpbVY2Z97bb30vdlrWmZQo/edit?gid=0#gid=0 for course plan
