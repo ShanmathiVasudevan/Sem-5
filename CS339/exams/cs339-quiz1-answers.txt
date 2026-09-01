@@ -1,0 +1,28 @@
+CS339 Autumn 2026 Quiz 1
+========================
+
+1. (a) 0
+   (b) does not terminate
+
+2. B
+
+3. (a) 5
+   (b) 0
+
+4. 1: 8
+   2: 18
+   3: 101
+   4: 15
+
+5. (a) (lambda (a) (lambda (b) ((a ctrue) b))) -- or equivalent
+   (b) 1: 'yes
+       2: 'no
+
+6. map: (lambda (x) (* x x x)) -- or equivalent
+   filter: (lambda (x) (> x 10)) -- or equivalent
+
+7. 1: (1 2 3)
+   2: (3 2 1)
+
+8. (a) 160
+   (b) 150
