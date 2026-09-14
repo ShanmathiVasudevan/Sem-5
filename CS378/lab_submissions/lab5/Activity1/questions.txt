@@ -1,0 +1,74 @@
+================================================================================
+  Lab05  Part-1 : CSMA/CA Warmup   (uses nsta-udp.cc)
+================================================================================
+
+Build ns-3 and run a SINGLE-station simulation, then answer the questions by
+editing answers.txt (put your answer after the '=' sign for each Qn).
+
+    ./ns3 run "nsta-udp --uplinks=1"
+
+Inspect stdout, the generated csma-ca-nsta-udp.txt, and the pcap files
+(AP-0-0.pcap / Cli-1-0.pcap) with wireshark/tshark.
+
+Answer format in answers.txt:
+    - single choice  : one option letter, e.g.  C
+    - multiple choice: comma-separated letters, e.g.  B,D
+    - numeric        : just the number, e.g.  48   or   21.6
+    - text (IP)      : dotted quad, e.g.  10.1.4.2
+--------------------------------------------------------------------------------
+
+Q1  [single] What is the name of the output file generated during the
+    simulations apart from the pcap file(s)?
+      A. out-nsta-udp.csv
+      B. out-nsta-udp.txt
+      C. csma-ca-nsta-udp.txt
+      D. output.txt
+
+Q2  [multiple] What is (are) the name(s) of the pcap files generated?
+      A. AccessPoint-0.pcap
+      B. AP-0-0.pcap
+      C. Station-1-0.pcap
+      D. Cli-1-0.pcap
+
+Q3  [text] What is the IP address of the client STA? (a.b.c.d)
+
+Q4  [text] What is the IP address of the AP? (a.b.c.d)
+
+Q5  [numeric] What is the application-layer data rate, i.e. how fast the
+    application is sending data? (in Mbps)
+
+Q6  [numeric] What is the physical-layer bitrate? (in Mbps)
+
+Q7  [single] Is the physical link saturated, i.e. busy almost all the time?
+      A. yes
+      B. no
+
+Q8  [numeric] What is the payload inside a UDP packet? (in bytes)
+
+Q9  [numeric] What is the payload of the link layer (i.e. received from the IP
+    layer) in the UDP packets sent? (in bytes) -- use the AP or Station pcap.
+
+Q10 [numeric] What is the observed average application-layer throughput as per
+    the output file generated? (in Mbps, one decimal place) -- average the
+    values in csma-ca-nsta-udp.txt.
+
+Q11 [numeric] How many UDP packets are received by the AP in the first 3
+    seconds of simulation? Use the AP pcap with the
+    "udp && frame.time_relative <= 3" filter.
+
+Q12 [numeric] What is the observed average application-layer throughput in the
+    first 3 seconds of simulation, as per the pcap file(s)? (in Mbps, two
+    decimal places)  Hint: packets * payload_bits / time.
+
+Q13 [numeric] What is the channel utilization, i.e. what percentage of the link
+    capacity (PHY data rate) was used for "useful" application work? (integer %)
+
+Q14 [numeric] What is the duration of the packet capture as per the pcap
+    file(s)? (in seconds, two decimal places)
+================================================================================
+
+--------------------------------------------------------------------------------
+BEFORE SUBMITTING: copy your generated outputs into /home/labDirectory so the
+backend can find them:
+    cp csma-ca-nsta-udp.txt AP-0-0.pcap /home/labDirectory/
+--------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+# Lab05 Part-2: CSMA/CA Efficiency & Fairness -- Answer Sheet
+# Put your answer after the '='. Q13 and Q14 are manually graded (leave blank).
+
+Q1=13
+Q2=A,B,C,D,E
+Q3=22.42
+Q4=22.78
+Q5=22.43
+Q6=21.87
+Q7=21.57
+Q8=1.00
+Q9=0.56
+Q10=0.19
+Q11=0.0882
+Q12=0.049
+Q13=
+Q14=

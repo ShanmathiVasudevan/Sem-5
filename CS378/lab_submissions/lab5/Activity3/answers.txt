@@ -1,0 +1,14 @@
+# Lab05 Part-3: Hidden Terminal & RTS/CTS -- Answer Sheet
+# Put your answer after the '='. Q8 is manually graded (leave blank here).
+
+Q1=3
+Q2=D
+Q3=A
+Q4=24.196
+Q5=17.636
+Q6=18.488
+Q7=17.238
+Q8=24B1020
+(a) The throughput in A is more than in B because without any contention, RTS/CTS is simply overhead
+(b) The throughput in A is less than in B because with contention, collisions can occur at the receiver without RTS/CTS, due to the hidden terminal problem
+(c) The throughput in A is more than in B because without contention, the CTS will always give an "clear to send" to the sender, but with contention, it may disallow.

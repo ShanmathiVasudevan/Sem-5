@@ -1,0 +1,71 @@
+Action at a Host
+=================
+
+This lab has two modules. Write your answers in answer.txt, one per
+line, in the exact format shown in that file. Do not change the
+question numbers.
+
+-----------------------------------------------------------------
+Module 1: Configuration Files
+-----------------------------------------------------------------
+
+Q1. What is the port number corresponding to "ldap" authentication
+    service?
+    Hint: Open /etc/services file ("vi /etc/services") and search
+    for ldap.
+
+Q2. What is the port number corresponding to "ssh" service?
+
+Q3. What is the port number corresponding to "https" service?
+
+Q4. What is the protocol number corresponding to "tcp"?
+    Hint: Open /etc/protocols file ("vi /etc/protocols") and search
+    for tcp.
+
+Q5. What is the protocol number corresponding to "udp"?
+
+Q6. What is the IP address corresponding to the loopback interface?
+    Format A.B.C.D. Ensure no extra spaces.
+
+-----------------------------------------------------------------
+Module 2: Browsing a Website
+-----------------------------------------------------------------
+
+A Wireshark trace ("trace.pcapng", in this directory) was
+automatically generated for you when this lab started. It was
+produced by generate_trace.sh, which picked ONE website (always the
+same one for you, based on your username) and browsed it over both
+HTTP and HTTPS. Open the trace and answer the questions below.
+
+Because your trace is unique to you, your answers will not match
+anyone else's -- that's expected. The grader recomputes the correct
+answers directly from YOUR trace file.
+
+Q7.  What is the IP address of the machine on which the trace was
+     collected? Format A.B.C.D. Ensure no extra spaces.
+     Hint: which machine originates the connections? Check
+     statistics -> endpoints.
+
+Q8.  What is the MAC address of the machine on which the trace was
+     collected? Format ab:cd:ef:gh:ij:kl. Ensure no extra spaces and
+     all small letters.
+     Hint: select the first packet you sent, then look under
+     Ethernet II in the packet details pane, against "source".
+
+Q9.  What is the MAC address of the web server? Format
+     ab:cd:ef:gh:ij:kl, or NA if you cannot determine it with the
+     available information.
+
+Q10. Which port(s) is the web server operating on, as per this
+     trace? Format X,Y (e.g. 80,443). Ensure no extra spaces.
+     Hint: look under statistics -> conversations, under TCP.
+
+Q11. How many packets were exchanged between the machine and the web
+     server? Format X.
+
+Q12. How many bytes were exchanged between the machine and the web
+     server? Include all headers, and answer as per the given trace.
+     Format X.
+
+Q13. How many TCP connections were established to the web server?
+     Format X.

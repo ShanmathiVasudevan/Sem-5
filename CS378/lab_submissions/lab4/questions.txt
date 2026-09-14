@@ -1,0 +1,106 @@
+NS3 WiFi Infrastructure Lab – Questions
+========================================
+
+Read problemstatement.md first for lab instructions, NS3 background, and
+how to generate and explore your trace.
+
+All questions below are graded (1 mark each, 20 marks total).
+Write answers in answer.txt as  Qn=<answer>.
+
+** Q1–Q4, Q8  →  use ns3-ap.pcap  **
+** Q5–Q7, Q9–Q13  →  use ns3-sta.pcap **
+
+For Q14–Q20 write just the option letter (A, B, C, or D).
+For Q8 round to the nearest whole second.
+For Q13 give the answer in milliseconds, rounded to the nearest integer.
+
+------------------------------------------------------------------------
+
+Q1.  How many total packets (frames) are in ns3-ap.pcap?
+
+Q2.  How many 802.11 BEACON frames are in ns3-ap.pcap?
+     Filter: wlan.fc.type_subtype == 8
+
+Q3.  How many total MANAGEMENT frames (type == 0) are in ns3-ap.pcap?
+
+Q4.  How many total CONTROL frames (type == 1) are in ns3-ap.pcap?
+
+Q5.  How many total DATA frames (type == 2) are in ns3-sta.pcap?
+
+Q6.  How many UDP packets are in ns3-sta.pcap?
+     Filter: udp
+
+Q7.  What is the on-wire frame length (in bytes) of the FIRST UDP data
+     frame in ns3-sta.pcap?
+     Hint: tshark -r ns3-sta.pcap -Y udp -T fields -e frame.len | head -1
+
+Q8.  How long (in whole seconds) is the ns3-ap.pcap trace?
+     Hint: tshark -r ns3-ap.pcap -T fields -e frame.time_relative | tail -1
+
+Q9.  How many total packets (frames) are in ns3-sta.pcap?
+
+Q10. How many unique MAC addresses appear in ns3-sta.pcap?
+     (Include ff:ff:ff:ff:ff:ff if present; counts as one address.)
+     Hint:
+       tshark -r ns3-sta.pcap -T fields -e wlan.sa -e wlan.da | \
+         tr '\t' '\n' | sort -u | grep -vc '^$'
+
+Q11. How many ASSOCIATION REQUEST frames are in ns3-sta.pcap?
+     Filter: wlan.fc.type_subtype == 0
+
+Q12. How many ASSOCIATION RESPONSE frames are in ns3-sta.pcap?
+     Filter: wlan.fc.type_subtype == 1
+
+Q13. What is the beacon interval in milliseconds (rounded to nearest integer)?
+     Hint: tshark -r ns3-sta.pcap -Y 'wlan.fc.type_subtype==8' \
+               -T fields -e wlan.fixed.beacon | head -1
+     1 TU = 1.024 ms.  Multiply the TU value by 1.024 and round.
+
+Q14. [Conceptual] In 802.11 Frame Control, what decimal value does the
+     2-bit "Type" field have for a MANAGEMENT frame?
+       A. 0
+       B. 1
+       C. 2
+       D. 3
+
+Q15. [Conceptual] What decimal value does the 2-bit "Type" field have
+     for a CONTROL frame?
+       A. 0
+       B. 1
+       C. 2
+       D. 3
+
+Q16. [Conceptual] What decimal value does the 2-bit "Type" field have
+     for a DATA frame?
+       A. 0
+       B. 1
+       C. 2
+       D. 3
+
+Q17. [Conceptual] Who sends beacon frames in an 802.11 infrastructure
+     network?
+       A. The Station (STA)
+       B. The Access Point (AP)
+       C. Both AP and STA alternately
+       D. The router
+
+Q18. [Conceptual] In 802.11 infrastructure mode, if STA A wants to send
+     data to STA B (both associated with the same AP), the data path is:
+       A. STA A → STA B  (direct peer-to-peer)
+       B. STA A → AP → STA B
+       C. STA A → wired router → STA B
+       D. STA A → DNS server → STA B
+
+Q19. [Conceptual] Both Beacon and Association Response are MANAGEMENT
+     frames.  Which 4-bit sub-field in 802.11 Frame Control distinguishes
+     one from the other?
+       A. Protocol Version
+       B. Type
+       C. Subtype
+       D. ToDS bit
+
+Q20. [Conceptual] An ACK frame in 802.11 belongs to which category?
+       A. Management
+       B. Data
+       C. Control
+       D. Physical

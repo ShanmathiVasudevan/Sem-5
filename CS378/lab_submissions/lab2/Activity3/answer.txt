@@ -1,0 +1,21 @@
+# Write your answers below, one per line, in the form Qn=<answer>.
+# Do not remove or renumber the questions. See questions.txt for the
+# full question text.
+#
+# Q2 is multi-select: answer with comma-separated letters, e.g. Q2=C
+#
+# Q6 and Q11 are written-answer questions and are graded manually,
+# not by the autograder -- write your explanation on those lines
+# anyway.
+
+Q1=174454
+Q2=C
+Q3=15.45
+Q4=1.48
+Q5=117.19
+Q6=the output of wget shows the number of bytes downloaded. the throughput mentioned by wget is more than what we calculated
+Q7=64
+Q8=1.03
+Q9=3992.135
+Q10=25780.551
+Q11=the output of ping shows slightly higher latency times than the trace on wireshark.

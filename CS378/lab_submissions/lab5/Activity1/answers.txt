@@ -1,0 +1,18 @@
+# Lab05 Part-1: CSMA/CA Warmup -- Answer Sheet
+# Put your answer after the '=' on each line. See questions.txt for format.
+# Do NOT rename the Qn keys.
+
+Q1=C
+Q2=B,D
+Q3=10.1.4.2
+Q4=10.1.4.1
+Q5=50
+Q6=48
+Q7=A
+Q8=1000
+Q9=1028
+Q10=22.418
+Q11=8516
+Q12=22.70
+Q13=47
+Q14=4.23

@@ -1,0 +1,100 @@
+Wireshark Trace Analysis Lab
+============================
+
+A packet trace was automatically generated for you when this lab
+started, and saved as "trace.pcapng" in your home directory. It
+was produced by generate_trace.sh, which:
+  - sent HTTP GET requests to 5 random websites,
+  - sent a UDP packet to 4 different random websites, and
+  - performed a DNS (A record) query for 5 different random websites.
+
+Open trace.pcapng in Wireshark (already installed) and answer the
+questions below. Write your answers in answer.txt, one per line, in
+the exact format shown in that file. Do not change the question
+numbers (Q1, Q2, ...) in answer.txt.
+
+Because your trace is unique to you, your numeric answers will not
+match anyone else's -- that's expected. The grader recomputes the
+correct answers directly from YOUR trace file.
+
+Q1.  How many packets are there in the trace? Find out without
+     scrolling :-)
+
+Q2.  How long was the trace collected? Express it in seconds
+     (whole number is fine).
+
+Q3.  On what date was the first packet in the trace sent/received?
+     Express it as YYYY-MM-DD. You may need to change the time
+     display format (View menu) to see the date.
+
+Q4.  What is the size of the first packet in the trace? Express in
+     bytes.
+
+Q5.  Which protocol does the first packet belong to? Use the exact
+     text shown in the "Protocol" column of the packet list.
+
+Q6.  Find the FIRST packet in the trace that belongs to the DNS
+     protocol. Based on that packet, what is the size of the
+     Ethernet header, in bytes?
+
+Q7.  Same packet as Q6: what is the size of the IP header, in bytes?
+
+Q8.  Same packet as Q6: what is the size of the UDP header, in bytes?
+
+Q9.  Same packet as Q6: DNS is an application layer protocol. What is
+     the size of the DNS message itself (the payload), in bytes?
+
+Q10. After how much time was the 10th packet in the trace
+     received/sent, relative to the time the 5th packet was
+     sent/received? Express it in milliseconds.
+
+Q11. Not related to the given trace: if you wished to CAPTURE all
+     packets other than the "arp" protocol, what would you type in
+     the capture filter field? Answer with just the option letter.
+       A. arp
+       B. no arp
+       C. not arp
+       D. not port arp
+
+Q12. Not related to the given trace: if you wished to CAPTURE all
+     packets associated with a host with IP address 10.129.158.65,
+     what would you type in the capture filter field? Answer with
+     just the option letter.
+       A. ip.addr == 10.129.158.65
+       B. ip 10.129.158.65
+       C. Host.addr == 10.129.158.65
+       D. host 10.129.158.65
+
+Q13. In the given trace, if you wished to DISPLAY packets that are
+     from/to a server running on port 80, what would you type in the
+     display filter? Answer with just the option letter.
+       A. tcp.port == 80 || udp.port == 80
+       B. http
+       C. port == 80
+       D. http 80
+
+Q14. In the given trace, if you wished to DISPLAY all packets SENT
+     from a host with IP address 10.129.158.65, what would you type
+     in the display filter? Answer with just the option letter.
+       A. ip.addr == 10.129.158.65
+       B. ip.src == 10.129.158.65
+       C. host 10.129.158.65
+       D. host.addr == 10.129.158.65
+
+Q15. How many IPv6 packets are there in the trace?
+
+Q16. How many UDP packets are there in the trace?
+
+Q17. How many TCP packets are there in the trace?
+
+Q18. How many TCP connections are there in the trace?
+
+Q19. How many pairs of hosts (identified by their unique Ethernet
+     address) communicated with each other? Ignore all broadcast
+     communications (destination ff:ff:ff:ff:ff:ff).
+
+Q20. How many unique Ethernet addresses are in the trace? Include
+     the broadcast address ff:ff:ff:ff:ff:ff if present.
+
+Q21. How many unique IPv4 addresses are in the trace? Include the
+     broadcast address 255.255.255.255 if present.

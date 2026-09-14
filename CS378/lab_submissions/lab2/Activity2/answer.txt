@@ -1,0 +1,21 @@
+# Write your answers below, one per line, in the form Qn=<answer>.
+# Do not remove or renumber the questions. See questions.txt for the
+# full question text.
+#
+# Q1, Q3, Q6 are multi-select: answer with comma-separated letters,
+# e.g. Q1=A,B
+#
+# Q11 is a written-answer question and is graded manually, not by
+# the autograder -- write your explanation on that line anyway.
+
+Q1=A
+Q2=0806
+Q3=A,B
+Q4=0800
+Q5=01
+Q6=A,B,C
+Q7=06
+Q8=172.65.251.78
+Q9=22
+Q10=22
+Q11=Stream index/ID changes, so it indexes the packets on that stream if they arrive in close duration. They have a unique sequence number also in the header which can be used to distinguish the packets during decapsulation

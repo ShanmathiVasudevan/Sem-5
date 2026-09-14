@@ -1,0 +1,34 @@
+# NS3 WiFi Lab – Answer Sheet
+#
+# Instructions:
+#   1. First run:  bash generate_trace.sh <YOUR_ROLL_NUMBER>
+#   2. Analyse ns3-ap.pcap and ns3-sta.pcap with tshark (see questions.txt)
+#   3. Write your answers below in the form  Qn=<answer>
+#   4. For Q14–Q20, answer with just the option letter (A, B, C, or D)
+#   5. For Q8 (trace duration) round to nearest whole second
+#   6. For Q13 (beacon interval) answer in milliseconds, rounded to nearest integer
+#   7. Do NOT rename or remove question labels
+#
+# Your roll number:
+ROLL=24B1020
+
+Q1=343
+Q2=293
+Q3=295
+Q4=2
+Q5=46
+Q6=46
+Q7=1366
+Q8=29.900800
+Q9=343
+Q10=3
+Q11=1
+Q12=1
+Q13=102
+Q14=A
+Q15=B
+Q16=C
+Q17=B
+Q18=B
+Q19=C
+Q20=C

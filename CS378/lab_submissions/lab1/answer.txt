@@ -1,0 +1,29 @@
+# Write your answers below, one per line, in the form Qn=<answer>.
+# Do not remove or renumber the questions. See questions.txt for the
+# full question text.
+#
+# For Q11-Q14, answer with just the option letter (A, B, C, or D).
+# For Q3, answer as YYYY-MM-DD.
+# For everything else, answer with a plain number.
+
+Q1=111
+Q2=13
+Q3=2026-07-29
+Q4=70
+Q5=DNS
+Q6=14
+Q7=20
+Q8=8
+Q9=28
+Q10=820
+Q11=C
+Q12=D
+Q13=A
+Q14=B
+Q15=0
+Q16=44
+Q17=67
+Q18=6
+Q19=1
+Q20=2
+Q21=11

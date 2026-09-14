@@ -1,0 +1,58 @@
+================================================================================
+  Lab05  Part-2 : CSMA/CA Efficiency and Fairness   (uses nsta-udp.cc)
+================================================================================
+
+Under high load, CSMA/CA does not perform well. You will observe this by running
+5 network instances with 1, 5, 10, 20 and 30 client nodes, and use summarize.py
+to compute two metrics per instance:
+
+  "Avg. Throughput"    = average of the per-second TOTAL throughputs
+  "Avg. Min/Max ratio" = average of the per-second (min/max) throughput ratios
+
+Run each instance and summarise (each run writes csma-ca-nsta-udp-<N>.txt):
+     ./ns3 run "nsta-udp --uplinks=1"   && python3 summarize.py csma-ca-nsta-udp-1.txt
+     ./ns3 run "nsta-udp --uplinks=5"   && python3 summarize.py csma-ca-nsta-udp-5.txt
+     ./ns3 run "nsta-udp --uplinks=10"  && python3 summarize.py csma-ca-nsta-udp-10.txt
+     ./ns3 run "nsta-udp --uplinks=20"  && python3 summarize.py csma-ca-nsta-udp-20.txt
+     ./ns3 run "nsta-udp --uplinks=30"  && python3 summarize.py csma-ca-nsta-udp-30.txt
+(or run everything at once:  python3 summarize_automate.py --roll <ROLL_NO>)
+
+NOTE: grading reads these csma-ca-nsta-udp-<N>.txt files from the ns-3 directory
+to recompute the correct metrics, so keep them in place (run all 5 instances).
+
+Answer format in answers.txt:
+  numeric -> just the number ; multiple choice -> comma-separated letters.
+--------------------------------------------------------------------------------
+
+Q1  [numeric] How many pcap files would be generated if the number of uplinks
+    was set to 12? (find the pattern; you need not run 12 uplinks)
+
+Q2  [multiple] In which scenarios (by number of clients) is the physical link
+    saturated? Select all that apply.
+      A. 1     B. 5     C. 10     D. 20     E. 30
+
+Q3  [numeric] "Avg. Throughput" for 1 client node? (Mbps, 1 decimal)
+Q4  [numeric] "Avg. Throughput" for 5 client nodes? (Mbps, 1 decimal)
+Q5  [numeric] "Avg. Throughput" for 10 client nodes? (Mbps, 1 decimal)
+Q6  [numeric] "Avg. Throughput" for 20 client nodes? (Mbps, 1 decimal)
+Q7  [numeric] "Avg. Throughput" for 30 client nodes? (Mbps, 1 decimal)
+
+Q8  [numeric] "Avg. Min/Max ratio" for 1 client node? (2 decimals)
+Q9  [numeric] "Avg. Min/Max ratio" for 5 client nodes? (2 decimals)
+Q10 [numeric] "Avg. Min/Max ratio" for 10 client nodes? (2 decimals)
+Q11 [numeric] "Avg. Min/Max ratio" for 20 client nodes? (2 decimals)
+Q12 [numeric] "Avg. Min/Max ratio" for 30 client nodes? (2 decimals)
+
+Q13 [paper, 4 marks] Attach the "Avg. Throughput" line-plot-with-markers
+    (X = #nodes, Y = Avg. Throughput). Label axes; title must include your roll
+    number. Explain the trend briefly. MANUALLY GRADED.
+
+Q14 [paper, 4 marks] Attach the "Avg. Min/Max ratio" line-plot-with-markers
+    (X = #nodes, Y = ratio). Label axes; title must include your roll number.
+    Explain the trend briefly. MANUALLY GRADED.
+================================================================================
+
+--------------------------------------------------------------------------------
+BEFORE SUBMITTING: copy your five throughput files into /home/labDirectory:
+    cp csma-ca-nsta-udp-*.txt /home/labDirectory/
+--------------------------------------------------------------------------------

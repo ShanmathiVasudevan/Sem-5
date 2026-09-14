@@ -1,0 +1,17 @@
+# Write your answers below, one per line, in the form Qn=<answer>.
+# Do not remove or renumber the questions. See questions.txt for the
+# full question text.
+
+Q1=389
+Q2=22
+Q3=443
+Q4=6
+Q5=17
+Q6=127.0.0.1
+Q7=172.17.0.3
+Q8=ae:0b:da:ae:a5:87
+Q9=NA
+Q10=80,443
+Q11=77
+Q12=22659
+Q13=4

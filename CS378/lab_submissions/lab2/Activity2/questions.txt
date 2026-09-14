@@ -1,0 +1,107 @@
+Types of Traffic
+=================
+
+A Wireshark trace ("trace.pcapng", in this directory) was
+automatically generated for you when this lab started: it contains
+real ARP, ICMP (ping), and SSH traffic generated from this
+container. Write your answers in answer.txt, one per line, in the
+exact format shown in that file. Do not change the question numbers.
+
+Because your trace is unique to you, some answers (like IP addresses)
+will not match anyone else's -- that's expected. The grader
+recomputes the correct answers directly from YOUR trace file.
+
+In the below questions, be sure to filter the trace so that only the
+packets corresponding to that protocol appear. It is useful to know
+at what layer a given protocol operates.
+
+-----------------------------------------------------------------
+Module 1: Types of Traffic
+-----------------------------------------------------------------
+
+Q1. ARP Protocol: What all headers encapsulate a packet from the ARP
+    protocol? Select all that apply, comma-separated (e.g. A,B).
+      A. Link Layer
+      B. Network Layer
+      C. Transport Layer
+      D. Application Layer
+    Hint: filter by "arp" in the display filter. Select any packet
+    -- you'll see it only has an Ethernet header.
+
+Q2. ARP Protocol: What is the value of the field used in the
+    Ethernet header to pass packets to the ARP module? Express it in
+    hexadecimal. Format XXXX (e.g. 809B).
+
+Q3. ICMP Protocol: What all headers encapsulate a packet from the
+    ICMP protocol? Select all that apply, comma-separated.
+      A. Link Layer
+      B. Network Layer
+      C. Transport Layer
+      D. Application Layer
+    Hint: filter by "icmp". Select any packet -- it has both an
+    Ethernet and IPv4 header.
+
+Q4. ICMP Protocol: Expand the "Ethernet" header of an ICMP packet.
+    Which higher level process (protocol) is this packet passed to?
+    Express it in hexadecimal. Format XXXX (e.g. 809B).
+
+Q5. ICMP Protocol: Expand the IP header. What is the value of the
+    field used in this header to pass packets to the ICMP module?
+    Express it in hexadecimal. Format XX (e.g. 80).
+
+Q6. SSH Protocol: What all headers encapsulate a packet from the SSH
+    protocol? Select all that apply, comma-separated.
+      A. Link Layer
+      B. Network Layer
+      C. Transport Layer
+      D. Application Layer
+    Hint: filter by "ssh". Select any packet -- it has Ethernet,
+    IPv4 and TCP headers.
+
+Q7. SSH Protocol: Expand the IP header. What is the value of the
+    field used in this header to pass packets to the higher layer?
+    Express it in hexadecimal. Format XX (e.g. 80).
+
+Q8. SSH Protocol: Based on the trace, can you identify the IP
+    address of the SSH server? Note: the SSH client (this machine)
+    originates the TCP connection to the SSH server. Format A.B.C.D.
+    Ensure no extra spaces.
+    Hint: filter by "ssh". The SSH server listens on port 22. Find
+    packets where the source port is 22 and identify the source IP.
+
+-----------------------------------------------------------------
+Module 2: Separating Conversations
+-----------------------------------------------------------------
+
+The trace includes traffic of TWO separate ssh sessions to the same
+server, established close together in time. Since the sessions have
+the same source and destination IP address, how are they uniquely
+identified?
+
+Use the SSH server IP address you found in Q8. Type
+"tcp.flags.syn == 0x02 && ip.addr == <that IP>" in the display filter
+to filter out unnecessary packets and capture just the first packet
+of both sessions in either direction. You should see 4 packets
+listed: the first two belong to the first ssh session, the next two
+to the second session.
+
+Q9.  What is the port number used by the ssh server in the FIRST
+     session? Format X (e.g. 120).
+     Hint: click the first packet and look at the destination port
+     under TCP.
+
+Q10. What is the port number used by the ssh server in the SECOND
+     session? Format X (e.g. 120).
+     Hint: click the third packet and look at the destination port
+     under TCP.
+
+Q11. [Written answer] If both sessions are connected to the same
+     port number on the ssh server, how do you think the ssh
+     application at the server distinguishes between the two
+     sessions? Also, when the client receives packets from the
+     server, how does the TCP layer figure out which ssh session a
+     packet belongs to?
+     Hint: set the display filter to "ssh". Then look at the
+     conversation statistics under TCP with the same display filter,
+     and closely observe what information you see.
+     Note: this question is graded manually, not by the autograder.
