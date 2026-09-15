@@ -175,7 +175,7 @@ foo1 ; #<procedure:foo1>
 
 ; the below was google ai overview's example when I asked how to use .
 (define (sum4 . args)
-  (if (null? args) 0 (+ (car args) (apply sum4 (cdr args))))) ; now what is apply? it's a procedure that takes an operator and a list and does accumulation. but what is the starting value (like v in foldr or foldl)? the car of the list itself ig :o
+  (if (null? args) 0 (+ (car args) (apply sum4 (cdr args))))) ; now what is apply? it's a procedure that takes an operator and a list and applies that operator using the elements of the list as the arguments (it's not an accumulator mbbb)
 (sum4 5 4 7 9 10) ; 35
 
 ; difference between apply, foldl and foldr

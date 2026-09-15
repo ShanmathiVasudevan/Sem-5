@@ -1,0 +1,74 @@
+#lang sicp
+
+; primitives in scheme: chars, bools, numbers
+
+; let's play with rational numbers :)
+; data abstraction allows us to play with data without caring about how it is implemented
+; operations on rationals | impl. of rationals | impl. of pairs
+; add-rat, print-rat | make-rat, numer, denom | cons, car, cdr
+
+(define (add-rat x y)(make-rat (+ (* (numer x) (denom y)) (* (numer y) (denom x))) (* (denom x) (denom y))))
+(define (print-rat x) (display (numer x))(display "/") (display (denom x)) (display "\n"))
+
+(define (make-rat n d)
+  (my-cons n d))
+(define (numer x)
+  (my-car x))
+(define (denom x)
+  (my-cdr x))
+;the abstraction layers of make-rat and print-rat are different
+; the difference is clear when we think about where to simplify our rational numbers. do we do it in make-rat or print-rat?
+; doing it in make-rat means the data is *stored* simplified. we can write other functions assuming simplification is handled
+; doing it in print-rat means the data is simplified when it is getting *used*. we can't assume anything when writing the other functions.
+
+; pairing ops
+(define (my-cons x y)(lambda (select) (if (= select 0) x y)))
+(define (my-car x)(x 0))
+(define (my-cdr x)(x 1))
+
+;church-pairs
+(define c-cons (lambda (x) (lambda (y) (lambda (sel) ((sel x ) y)))))
+(define c-car (lambda (x) (x (lambda (a) (lambda (b) a))))) ; similar to ctrue
+(define c-cdr (lambda (x) (x (lambda (a) (lambda (b) b))))) ; similar to cfalse
+
+(define x (make-rat 2 5))
+(define y (make-rat 5 2))
+(print-rat (add-rat x y)) ; 29/10
+(print-rat x) ;2/5
+
+; working with the builtins - cons, car and cdr
+; why are these even named car and cdr? comes from an old computer architecture term, where they had special register, made of a pair of registers, with the first being the address (car) and second being the decrement (cdr)
+(cons 2 3) ; (2 . 3) -  (cons x y) puts x and y together and returns a pair 
+(cons 3 4) ; (3 . 4)
+(define p (cons 3 4))
+(car p) ; 3 -  (car x) returns the first element of a pair x
+(cdr p) ; 4 -  (cdr x) returns the second element of a pair x
+(define z (cons 1 (cons 2 (cons 3 4))))
+z ; (1 2 3 . 4) - element after the dot is an unchained pair
+(car z) ; 1
+(cdr z) ; (2 3 . 4)
+(car (cdr z)) ; 2
+; (car (cdr (cdr (cdr z)))) - this gives error
+; mcar: contract violation
+;  expected: mpair?
+;  given: 4
+
+; pairs follow the box-pointer notation - this makes it implicit that pairs can have other pairs as elements
+
+; we chain pairs to form a list
+(list 1 2 3 4) ; list is a special form - output is (1 2 3 4) - last element of a list is nil. to check if a list is nil, use (null? l)
+nil ; ()
+(define l '(1 2 3 4))
+(cadr l) ; 2
+; note - cadr isn't defined using a define really, it's done using macros. so doing (cadr l) and (car (cdr l)) are not the same
+(cdddr l) ;(4)
+(caddr l) ; 3
+(cadddr l) ; 4
+; (caddddr l) - this isn't defined in sicp
+
+(define l1 (cons (cons 1 2) (cons 3 4)))
+l1 ; ((1 . 2) 3 . 4)
+(car l1) ; (1 . 2)
+(cadr l1) ; 3
+(cdar l1) ; 2
+(car '(1 2 3)) ; 1
