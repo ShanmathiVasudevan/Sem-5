@@ -1,0 +1,16 @@
+PING google.com (192.178.173.139) 56(84) bytes of data.
+64 bytes from 192.178.173.139: icmp_seq=1 ttl=63 time=93.2 ms
+64 bytes from 192.178.173.139: icmp_seq=2 ttl=63 time=88.7 ms
+64 bytes from 192.178.173.139: icmp_seq=3 ttl=63 time=172 ms
+64 bytes from 192.178.173.139: icmp_seq=4 ttl=63 time=97.2 ms
+64 bytes from 192.178.173.139: icmp_seq=5 ttl=63 time=92.5 ms
+64 bytes from 192.178.173.139: icmp_seq=6 ttl=63 time=78.0 ms
+64 bytes from 192.178.173.139: icmp_seq=7 ttl=63 time=76.2 ms
+64 bytes from 192.178.173.139: icmp_seq=8 ttl=63 time=80.6 ms
+64 bytes from 192.178.173.139: icmp_seq=9 ttl=63 time=88.9 ms
+64 bytes from 192.178.173.139: icmp_seq=10 ttl=63 time=85.8 ms
+64 bytes from 192.178.173.139: icmp_seq=11 ttl=63 time=75.5 ms
+
+--- google.com ping statistics ---
+11 packets transmitted, 11 received, 0% packet loss, time 10019ms
+rtt min/avg/max/mdev = 75.521/93.561/172.422/25.890 ms

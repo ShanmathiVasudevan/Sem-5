@@ -1,0 +1,14 @@
+--2026-08-31 08:12:31--  http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-28ubuntu4.1_amd64.deb
+Resolving archive.ubuntu.com (archive.ubuntu.com)... 91.189.92.22, 185.125.190.83, 91.189.91.82, ...
+Connecting to archive.ubuntu.com (archive.ubuntu.com)|91.189.92.22|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 174454 (170K) [application/vnd.debian.binary-package]
+Saving to: ‘downloaded_file’
+
+     0K .......... .......... .......... .......... .......... 29%  154K 1s
+    50K .......... .......... .......... .......... .......... 58%  198K 0s
+   100K .......... .......... .......... .......... .......... 88%  259K 0s
+   150K .......... ..........                                 100%  239K=0.9s
+
+2026-08-31 08:12:33 (199 KB/s) - ‘downloaded_file’ saved [174454/174454]
+
